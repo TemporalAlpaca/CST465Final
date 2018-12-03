@@ -54,7 +54,7 @@
                 <td>
                     <form asp-action="Delete" asp-controller="Link" class="form-group" method="post">
                         <label asp-for="@link.Id" hidden></label>
-                        <input type="hidden" asp-for="@link.Id" class="form-control" />
+                        <input type="hidden" asp-for="@link.Id" value="@link.Id" name="id" class="form-control" />
 
                         <button class="btn btn-primary" type="submit">Delete</button>
                     </form>

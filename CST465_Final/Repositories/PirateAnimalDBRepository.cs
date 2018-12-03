@@ -23,7 +23,7 @@ namespace CST465_Final.Repositories
 
             return connectionString;
         }
-        public void Delete(PirateAnimalModel pirateAnimal)
+        public void Delete(int id)
         {
             SqlConnection connection = new SqlConnection(GetConnectionString());
 
@@ -35,7 +35,7 @@ namespace CST465_Final.Repositories
                 command.Connection = connection;
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.CommandText = "PirateAnimals_Delete";
-                command.Parameters.AddWithValue("@Id", pirateAnimal.id);
+                command.Parameters.AddWithValue("@Id", id);
 
                 command.ExecuteNonQuery();
             }

@@ -13,6 +13,6 @@ namespace Assignment1.Repositories
 
         void Insert(PirateModel pirate);
 
-        void Delete(PirateModel pirate);
+        void Delete(int id);
     }
 }

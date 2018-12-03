@@ -26,7 +26,7 @@ namespace Assignment1.Repositories
             return connectionString;
         }
 
-        public void Delete(LinkModel link)
+        public void Delete(int id)
         {
             SqlConnection connection = new SqlConnection(GetConnectionString());
 
@@ -38,7 +38,7 @@ namespace Assignment1.Repositories
                 command.Connection = connection;
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.CommandText = "Links_Delete";
-                command.Parameters.AddWithValue("@Id", link.Id);
+                command.Parameters.AddWithValue("@Id", id);
 
                 command.ExecuteNonQuery();
             }

@@ -20,12 +20,11 @@ namespace Assignment1.Repositories
                 .AddUserSecrets<Startup>();
 
             var configuration = builder.Build();
-
             string connectionString = configuration.GetConnectionString("CST465Final_DB");
 
             return connectionString;
         }
-        public void Delete(PirateModel pirate)
+        public void Delete(int id)
         {
             SqlConnection connection = new SqlConnection(GetConnectionString());
 
@@ -37,7 +36,7 @@ namespace Assignment1.Repositories
                 command.Connection = connection;
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.CommandText = "Pirates_Delete";
-                command.Parameters.AddWithValue("@Id", pirate.id);
+                command.Parameters.AddWithValue("@Id", id);
 
                 command.ExecuteNonQuery();
             }

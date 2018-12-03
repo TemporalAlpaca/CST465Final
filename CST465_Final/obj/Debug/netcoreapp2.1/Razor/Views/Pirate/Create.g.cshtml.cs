@@ -75,12 +75,12 @@ using Assignment1.Models;
                 WriteLiteral("\r\n    <!DOCTYPE HTML>\r\n\r\n    <html lang=\"en\">\r\n\r\n    ");
                 EndContext();
                 BeginContext(170, 774, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "72387461ee18439daa59c88bd3b5fc6e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "99588e238d3b480a8ea6563c89b5af56", async() => {
                     BeginContext(176, 10, true);
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(186, 52, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "0f42bf2d9d1341bb9bc8f207db879a1f", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2393c5d66f204f3384a5e6737cfd7206", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -128,12 +128,12 @@ using Assignment1.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(969, 1858, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "03a82daf2fa848fbbae203ebf0dc5d6d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f1d190d6f607478fa67f781546754835", async() => {
                     BeginContext(975, 78, true);
                     WriteLiteral("\r\n        <div>\r\n            <b>Create a Pirate:</b>\r\n        </div>\r\n        ");
                     EndContext();
                     BeginContext(1053, 1761, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7502f53323f94eea8d3ccb0c4dc83938", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f74c197a7ea2454483fdd946e6eb0b4d", async() => {
                         BeginContext(1136, 14, true);
                         WriteLiteral("\r\n            ");
                         EndContext();

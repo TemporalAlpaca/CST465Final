@@ -16,7 +16,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.js"></script>
-        <title>Yarr Pirates' Pets</title>
+        <title>Yarrr Pirates' Pets</title>
     </head>
 }
 
@@ -26,7 +26,7 @@
     <body>
         @Html.Partial("_NavBar")
         <h1>
-            Yarr pirates need pets too
+            Yarrr pirates need pets too.
         </h1>
         @Html.ActionLink("Create a pirate pet",
                 "Create",  // <-- Action.
@@ -45,6 +45,7 @@
                 <th>Species</th>
                 <th>Speaks English</th>
                 <th>Age</th>
+                <th></th>
 
             </tr>
             @foreach (var pirateAnimal in Model)
@@ -57,7 +58,7 @@
                     <td>
                         <form asp-action="Delete" asp-controller="PirateAnimal" class="form-group" method="post">
                             <label asp-for="@pirateAnimal.id" hidden></label>
-                            <input type="hidden" asp-for="@pirateAnimal.id" class="form-control" />
+                            <input type="hidden" asp-for="@pirateAnimal.id" value="@pirateAnimal.id" name="id" class="form-control" />
 
                             <button class="btn btn-primary" type="submit">Delete</button>
                         </form>

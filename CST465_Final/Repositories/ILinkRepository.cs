@@ -1,4 +1,5 @@
 ﻿using Assignment1.Models;
+using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,6 @@ namespace CST465_Final.Repositories
 
         void Insert(LinkModel link);
 
-        void Delete(LinkModel link);
+        void Delete(int id);
     }
 }

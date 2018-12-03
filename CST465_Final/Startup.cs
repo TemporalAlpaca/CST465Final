@@ -51,6 +51,7 @@ namespace CST465_Final
                     };
                 });
 
+            services.AddMemoryCache();
             services.AddTransient<IPirateRepository, PirateDBRepository>();
             services.AddTransient<IPirateAnimalRepository, PirateAnimalDBRepository>();
             services.AddTransient<ILinkRepository, LinkDBRepository>();
@@ -76,6 +77,8 @@ namespace CST465_Final
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseAuthentication();
+            app.UseMvcWithDefaultRoute();
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>

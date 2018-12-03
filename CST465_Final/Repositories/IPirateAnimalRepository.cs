@@ -12,6 +12,6 @@ namespace CST465_Final.Repositories
 
         void Insert(PirateAnimalModel pirateAnimal);
 
-        void Delete(PirateAnimalModel pirateAnimal);
+        void Delete(int id);
     }
 }
