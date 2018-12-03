@@ -28,8 +28,13 @@ using Assignment1.Models;
 
 #line default
 #line hidden
+#line 4 "C:\Users\Caleb\source\repos\CST465_Final\CST465_Final\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dec7f841a5d7a8c337724c57b8195da71ad53873", @"/Views/Contact/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e1190beb42236403c3b6f92a5a61c0976b3bceac", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bb36af1f447ed1534cf15452c51ba049193c0ff5", @"/Views/_ViewImports.cshtml")]
     public class Views_Contact_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Assignment1.Models.ContactModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -74,12 +79,12 @@ using Assignment1.Models;
                 WriteLiteral("\r\n<!DOCTYPE HTML>\r\n<html lang=\"en\">\r\n\r\n");
                 EndContext();
                 BeginContext(156, 746, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "91fbed67c39c4ad0b393fd1820958dba", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d77d05c55444f9988d0e9d6fbf07b85", async() => {
                     BeginContext(162, 6, true);
                     WriteLiteral("\r\n    ");
                     EndContext();
                     BeginContext(168, 52, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "cd5c6aa5409c44369e36ffb19cb6ebaf", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "64390b93967d4e9ab5a8cc3b1d6ff04e", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -130,7 +135,7 @@ using Assignment1.Models;
                 WriteLiteral("\r\n");
                 EndContext();
                 BeginContext(925, 2375, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "310fb677e05849319a3cb44417bffd4a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b808becc8ee74ae180731e599000f12a", async() => {
                     BeginContext(931, 6, true);
                     WriteLiteral("\r\n    ");
                     EndContext();
@@ -154,7 +159,7 @@ Write(Html.Partial("_NavBar"));
                     WriteLiteral("        ");
                     EndContext();
                     BeginContext(1023, 1804, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58fc826f860341fa91cdb89c2e51d195", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bceaf6f2f6a14d1988fce2be6f5014eb", async() => {
                         BeginContext(1092, 181, true);
                         WriteLiteral("\r\n            <div class=\"form-group\">\r\n                <label class=\"control-label col-sm-2\" for=\"Name\">Name:</label>\r\n                <div class=\"col-sm-10\">\r\n                    ");
                         EndContext();

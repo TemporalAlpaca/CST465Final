@@ -1,0 +1,75 @@
+﻿@inject RoleManager<IdentityRole> RoleMan
+@inject UserManager<IdentityUser> UserMan
+@{
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+@section navBar{
+    <!DOCTYPE HTML>
+
+    <html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="~/DefaultStyles.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.js"></script>
+        <title>Procrastinate With Pirates</title>
+    </head>
+}
+
+@section body{
+    <body>
+        @Html.Partial("_NavBar")
+        <div>
+            Roles:
+        </div>
+        @foreach (var role in RoleMan.Roles)
+        {
+            <div>
+                Role Name : @role.Name
+            </div>
+        }
+
+        <div>
+            Users:
+        </div>
+
+        @foreach (var user in UserMan.Users)
+        {
+            <div>
+                Username: @user.UserName
+            </div>
+        }
+
+        <div>
+            Add Role:
+        </div>
+        <form class="form-group" method="post" action="/Admin/InsertRole">
+            @Html.AntiForgeryToken()
+            <label for="RoleName">Role Name</label>
+            <input class="form-control" type="text" id="RoleName" name="RoleName" value="" />
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+        <div>
+            Add User to Role:
+        </div>
+        <form class="form-group" method="post" action="/Admin/UpdateUserRole">
+            @Html.AntiForgeryToken()
+
+            <label for="RoleName">Role Name</label>
+            @Html.DropDownList("RoleName", (new SelectList(RoleMan.Roles, "Name", "Name")),
+                "Select Role", new { @class = "form-control" })
+
+            <label for="Username">Username</label>
+            <input class="form-control" type="text" id="Username" name="Username" value="" />
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </body>
+}

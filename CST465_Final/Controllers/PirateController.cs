@@ -19,12 +19,10 @@ namespace CST465_Final.Controllers
     {
         // GET: /<controller>/
         private IPirateRepository pirateRepository;
-        private IMemoryCache memoryCache;
 
         public PirateController(IPirateRepository pirateRepo, IMemoryCache cache)
         {
             pirateRepository = pirateRepo;
-            memoryCache = cache; 
         }
 
         [AllowAnonymous]
