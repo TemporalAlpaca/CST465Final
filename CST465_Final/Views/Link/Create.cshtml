@@ -1,4 +1,4 @@
-﻿@model CST465_Final.Models.PirateAnimalModel
+﻿@model Assignment1.Models.LinkModel
 @{
     Layout = "~/Views/Shared/_DefaultLayout.cshtml";
 }
@@ -15,40 +15,33 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.js"></script>
-        <title>Create a Pirate</title>
+        <title>Create a Link</title>
     </head>
 }
 @section body{
     <body>
         <div>
-            <b>Create a Pirate Pet:</b>
+            <b>Create a Link:</b>
         </div>
-        <form class="form-group" method="post" asp-action="Insert" asp-controller="PirateAnimal">
+        <form class="form-group" method="post" asp-action="Insert" asp-controller="Link">
             @Html.AntiForgeryToken()
             <div>
-                @Html.LabelFor(m => m.name)
-                @Html.EditorFor(m => m.name, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(m => m.name)
+                @Html.LabelFor(m => m.linkName)
+                @Html.EditorFor(m => m.linkName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.linkName)
             </div>
 
             <div>
-                @Html.LabelFor(m => m.animalType)
-                @Html.EditorFor(m => m.animalType, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(m => m.animalType)
+                @Html.LabelFor(m => m.linkAddress)
+                @Html.EditorFor(m => m.linkAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.linkAddress)
             </div>
 
             <div>
-                @Html.LabelFor(m => m.speaksEnglish)
-                @Html.CheckBoxFor(m => m.speaksEnglish, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(m => m.speaksEnglish)
+                @Html.LabelFor(m => m.pLevel)
+                @Html.EditorFor(m => m.pLevel, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.pLevel)
             </div>
-
-            <div>
-                @Html.LabelFor(m => m.age)
-                @Html.EditorFor(m => m.age, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(m => m.age)
-            </div>
-
             <button class="btn btn-primary" type="submit">Submit</button>
         </form>
     </body>

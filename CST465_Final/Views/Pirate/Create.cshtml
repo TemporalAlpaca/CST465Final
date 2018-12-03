@@ -27,32 +27,38 @@
             @Html.AntiForgeryToken()
             <div>
                 @Html.LabelFor(m => m.name)
-                @Html.EditorFor(m => m.name, new { attributes = new { @class = "form-control" } })
+                @Html.EditorFor(m => m.name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.name)
             </div>
 
             <div>
                 @Html.LabelFor(m => m.beardColor)
-                @Html.EditorFor(m => m.beardColor, new { attributes = new { @class = "form-control" } })
+                @Html.EditorFor(m => m.beardColor, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.beardColor)
             </div>
 
             <div>
                 @Html.LabelFor(m => m.catchPhrase)
-                @Html.TextAreaFor(m => m.catchPhrase, new { attributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(m => m.catchPhrase, new {  @class = "form-control", @rows = 3 })
+                @Html.ValidationMessageFor(m => m.catchPhrase)
             </div>
 
             <div>
                 @Html.LabelFor(m => m.numLegs)
-                @Html.EditorFor(m => m.numLegs, new { attributes = new { @class = "form-control" } })
+                @Html.EditorFor(m => m.numLegs, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.numLegs)
             </div>
 
             <div>
                 @Html.LabelFor(m => m.hasHat)
-                @Html.CheckBoxFor(m => m.hasHat, new { attributes = new { @class = "form-control" } })
+                @Html.CheckBoxFor(m => m.hasHat, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.hasHat)
             </div>
 
             <div>
                 @Html.LabelFor(m => m.hasEyepatch)
-                @Html.CheckBoxFor(m => m.hasEyepatch, new { attributes = new { @class = "form-control" } })
+                @Html.CheckBoxFor(m => m.hasEyepatch, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.hasEyepatch)
             </div>
             <button class="btn btn-primary" type="submit">Submit</button>
         </form>

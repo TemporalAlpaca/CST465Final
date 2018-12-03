@@ -10,13 +10,17 @@ namespace Assignment1.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Must enter a link address")]
+        [Display(Name = "Link Address: ")]
         public string linkAddress { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Must enter a link name")]
+        [Display(Name = "Link Name: ")]
         public string linkName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Must enter a procrastination level between 1 and 10")]
+        [Range(1,10)]
+        [Display(Name = "Procrastination level: ")]
         public int pLevel { get; set; }
 
         public LinkModel(int id, string linkaddress, string linkname, int plevel)

@@ -53,9 +53,11 @@ namespace CST465_Final
 
             services.AddTransient<IPirateRepository, PirateDBRepository>();
             services.AddTransient<IPirateAnimalRepository, PirateAnimalDBRepository>();
+            services.AddTransient<ILinkRepository, LinkDBRepository>();
 
             services.AddSingleton<IPirateRepository, PirateDBRepository>();
             services.AddSingleton<IPirateAnimalRepository, PirateAnimalDBRepository>();
+            services.AddSingleton<ILinkRepository, LinkDBRepository>();
 
         }
 

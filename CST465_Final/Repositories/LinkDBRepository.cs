@@ -38,7 +38,7 @@ namespace Assignment1.Repositories
                 command.Connection = connection;
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.CommandText = "Links_Delete";
-                command.Parameters.AddWithValue("@Id", link.id);
+                command.Parameters.AddWithValue("@Id", link.Id);
 
                 command.ExecuteNonQuery();
             }

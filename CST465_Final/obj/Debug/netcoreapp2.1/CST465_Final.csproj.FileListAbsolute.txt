@@ -39,3 +39,5 @@ C:\Users\Caleb\source\repos\CST465_Final\CST465_Final\obj\Debug\netcoreapp2.1\CS
 C:\Users\Caleb\source\repos\CST465_Final\CST465_Final\obj\Debug\netcoreapp2.1\Razor\Views\Pirate\Create.g.cshtml.cs
 C:\Users\Caleb\source\repos\CST465_Final\CST465_Final\obj\Debug\netcoreapp2.1\Razor\Views\PirateAnimal\Create.g.cshtml.cs
 C:\Users\Caleb\source\repos\CST465_Final\CST465_Final\obj\Debug\netcoreapp2.1\Razor\Views\PirateAnimal\Index.g.cshtml.cs
+C:\Users\Caleb\source\repos\CST465_Final\CST465_Final\obj\Debug\netcoreapp2.1\Razor\Views\Link\Create.g.cshtml.cs
+C:\Users\Caleb\source\repos\CST465_Final\CST465_Final\obj\Debug\netcoreapp2.1\Razor\Views\Link\Index.g.cshtml.cs
