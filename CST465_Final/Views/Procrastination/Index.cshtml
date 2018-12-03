@@ -1,0 +1,32 @@
+﻿@model Assignment1.Models.ContactModel
+@{
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+@section navBar{
+    <!DOCTYPE HTML>
+
+    <html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="~/DefaultStyles.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.js"></script>
+        <title>Procrastination Station</title>
+    </head>
+}
+
+
+@section body{
+    <body>
+        @Html.Partial("_NavBar")
+        <div>
+            Dummy Content
+        </div>
+    </body>
+
+</html>
+}

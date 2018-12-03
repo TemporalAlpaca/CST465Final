@@ -1,0 +1,74 @@
+﻿@*Pirate Index*@
+@model List<CST465_Final.Models.PirateModel>
+@{
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+@section navBar{
+    <!DOCTYPE HTML>
+
+    <html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="~/DefaultStyles.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.js"></script>
+        <title>Procrastinate With Pirates</title>
+    </head>
+}
+
+
+@section body{
+
+    <body>
+        @Html.Partial("_NavBar")
+        <h1>
+            Yarrr this be the pirate page.
+        </h1>
+        @Html.ActionLink("Create a pirate",
+                "Create",  // <-- Action.
+                "Pirate",   // <-- Controller
+                new PirateModel(), // <-- Model.
+                null  // <-- htmlArguments
+                )
+
+        <div>
+            <b>Pirates:</b>
+        </div>
+
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Beard Color</th>
+                <th>Hat</th>
+                <th>Number of Legs</th>
+                <th>Eyepatch</th>
+                <th>Catch Phrase</th>
+
+            </tr>
+            @foreach (var pirate in Model)
+            {
+                <tr>
+                    <td>@pirate.name</td>
+                    <td>@pirate.beardColor</td>
+                    <td>@pirate.hasHat</td>
+                    <td>@pirate.numLegs</td>
+                    <td>@pirate.hasEyepatch</td>
+                    <td>@pirate.catchPhrase</td>
+                    <td>
+                        <form asp-action="Delete" asp-controller="Pirate" class="form-group" method="post">
+                            <label asp-for="@pirate.id" hidden></label>
+                            <input type="hidden" asp-for="@pirate.id" class="form-control" />
+
+                            <button class="btn btn-primary" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </table>
+    </body>
+</html>
+}

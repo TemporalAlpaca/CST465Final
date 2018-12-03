@@ -1,0 +1,43 @@
+﻿.navbar {
+    color: #ECF600 !important;
+    background-color: #480366 !important;
+}
+
+    .navbar a {
+        color: #ECF600 !important;
+        background-color: #480366 !important;
+        padding-right: 30px;
+    }
+
+#navbar {
+    color: #ECF600 !important;
+    background-color: #480366 !important;
+}
+
+li {
+    background-color: #9B44C1 !important;
+    color: #ECF600 !important;
+}
+
+a {
+    color: #ECF600 !important;
+}
+
+body {
+    background-color: #9B44C1 !important;
+}
+
+ul {
+    background-color: #9B44C1 !important;
+}
+
+.list-group {
+    background-color: #9B44C1 !important;
+}
+
+button {
+    color: #ECF600 !important;
+    background-color: #480366 !important;
+    outline-color: #480366 !important;
+    border-color: #480366 !important;
+}

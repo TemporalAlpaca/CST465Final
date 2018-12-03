@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+@section navBar{
+    <!DOCTYPE HTML>
+
+    <html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="~/DefaultStyles.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Help Me Procrastinate Dot Com</title>
+    </head>
+}
+@section body{
+
+    <body>
+        @Html.Partial("_NavBar")
+        <header>
+            Here are some links that might distract you:
+            <nav>
+                <a href="https://www.netflix.com/browse">Netflix</a> |
+                <a href="https://www.google.com/">Google</a> |
+                <a href="https://www.reddit.com/">Reddit</a> |
+            </nav>
+        </header>
+
+        <main>
+            <div class="alert alert-success">
+                <strong>Niiice.</strong> You are successfully procrastinating!
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">Lots of homework?</div>
+                <div class="col-sm-4">Uninteresting class?</div>
+                <div class="col-sm-4">Don't have the book?</div>
+            </div>
+
+            <div class="col-sm-offset-2 col-sm-10">
+                <b>Here's what you should do:</b>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item">Put off the work</li>
+                <li class="list-group-item">Do something else</li>
+                <li class="list-group-item">Eat Doritos in bed</li>
+            </ul>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Let's get started not starting</h4>
+                    <p class="card-text">Click the button to start procrastinating</p>
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button class="btn btn-primary">Start</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Created by Caleb Kauffman</p>
+        </footer>
+
+    </body>
+
+</html>
+}

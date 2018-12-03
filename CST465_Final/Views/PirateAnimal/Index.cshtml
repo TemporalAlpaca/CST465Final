@@ -1,0 +1,70 @@
+﻿@*Pirate Animal Index*@
+@model List<CST465_Final.Models.PirateAnimalModel>
+@{
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+@section navBar{
+    <!DOCTYPE HTML>
+
+    <html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="~/DefaultStyles.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.js"></script>
+        <title>Yarr Pirates' Pets</title>
+    </head>
+}
+
+
+@section body{
+
+    <body>
+        @Html.Partial("_NavBar")
+        <h1>
+            Yarr pirates need pets too
+        </h1>
+        @Html.ActionLink("Create a pirate pet",
+                "Create",  // <-- Action.
+                "PirateAnimal",   // <-- Controller
+                new PirateAnimalModel(), // <-- Model.
+                null  // <-- htmlArguments
+                )
+
+        <div>
+            <b>Pirate Pets:</b>
+        </div>
+
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Species</th>
+                <th>Speaks English</th>
+                <th>Age</th>
+
+            </tr>
+            @foreach (var pirateAnimal in Model)
+            {
+                <tr>
+                    <td>@pirateAnimal.name</td>
+                    <td>@pirateAnimal.animalType</td>
+                    <td>@pirateAnimal.speaksEnglish</td>
+                    <td>@pirateAnimal.age</td>
+                    <td>
+                        <form asp-action="Delete" asp-controller="PirateAnimal" class="form-group" method="post">
+                            <label asp-for="@pirateAnimal.id" hidden></label>
+                            <input type="hidden" asp-for="@pirateAnimal.id" class="form-control" />
+
+                            <button class="btn btn-primary" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </table>
+    </body>
+</html>
+}
